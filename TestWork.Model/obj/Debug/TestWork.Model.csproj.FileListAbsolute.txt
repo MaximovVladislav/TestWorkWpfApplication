@@ -1,0 +1,4 @@
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Model\bin\Debug\TestWork.Model.dll
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Model\bin\Debug\TestWork.Model.pdb
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Model\obj\Debug\TestWork.Model.dll
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Model\obj\Debug\TestWork.Model.pdb
