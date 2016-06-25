@@ -117,7 +117,7 @@ namespace TestWork.PL.ViewModels
             try
             {
                 ManningTableEntryViewModel viewModel = new ManningTableEntryViewModel();
-                _viewFactory.ShowDialog(viewModel);
+                var result = _viewFactory.ShowDialog(viewModel);
                 if (viewModel.ManningTableEntry != null)
                     ManningTable.Add(viewModel.ManningTableEntry);
             }

@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Infrastructure\Interfaces\IClosable.cs" />
+    <Compile Include="Infrastructure\Interfaces\IClosableDialog.cs" />
     <Compile Include="Infrastructure\ViewFactory.cs" />
     <Compile Include="ViewModels\ManningTableEntryViewModel.cs" />
     <Compile Include="ViewModels\ManningTableViewModel.cs" />

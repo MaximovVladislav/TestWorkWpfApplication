@@ -145,7 +145,10 @@ namespace TestWork.PL.ViewModels
 
         private void ExecuteCancelCommand(object parameter)
         {
-            CloseWindow(parameter as IClosable);
+            var window = parameter as IClosableDialog;
+            if (window != null)
+                window.DialogResult = false;
+            CloseWindow(window);
         }
 
         private void ExecuteSaveCommand(object parameter)
@@ -157,7 +160,11 @@ namespace TestWork.PL.ViewModels
             ManningTableEntry.Rate = SelectedRate;
             ManningTableEntry.HeadCount = HeadCount;
 
-            CloseWindow(parameter as IClosable);
+            var window = parameter as IClosableDialog;
+            if (window != null)
+                window.DialogResult = true;
+            CloseWindow(window);
+           
         }
 
         /// <summary>
@@ -170,7 +177,7 @@ namespace TestWork.PL.ViewModels
             return SelectedDivision != null && SelectedRate != null;
         }
 
-        private void CloseWindow(IClosable window)
+        private void CloseWindow(IClosableDialog window)
         {
             if (window != null)
                 window.Close();

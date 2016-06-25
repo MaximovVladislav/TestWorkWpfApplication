@@ -18,7 +18,7 @@ namespace TestWork.PL.Views
     /// <summary>
     /// Логика взаимодействия для ManningTableEntryView.xaml
     /// </summary>
-    public partial class ManningTableEntryView : Window, IClosable
+    public partial class ManningTableEntryView : Window, IClosableDialog
     {
         public ManningTableEntryView()
         {

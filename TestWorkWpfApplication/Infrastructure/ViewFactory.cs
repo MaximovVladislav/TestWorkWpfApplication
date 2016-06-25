@@ -14,7 +14,7 @@ namespace TestWork.PL.Infrastructure
         /// </summary>
         /// <typeparam name="T">ViewModel</typeparam>
         /// <param name="viewModel">тип ViewModel</param>
-        public void ShowDialog<T>(T viewModel) where T : ViewModelBase
+        public bool? ShowDialog<T>(T viewModel) where T : ViewModelBase
         {
             //string viewModelTypeName = viewModel.GetType().ToString();
             string viewModelTypeName = typeof(T).ToString();
@@ -29,7 +29,7 @@ namespace TestWork.PL.Infrastructure
 
                 view.DataContext = viewModel;
 
-                view.ShowDialog();
+                return view.ShowDialog();
             }
             catch (Exception ex)
             {
