@@ -1,0 +1,50 @@
+﻿<Window x:Class="TestWork.PL.Views.ManningTableEntryView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestWork.PL.Views"
+        xmlns:viewModels="clr-namespace:TestWork.PL.ViewModels"
+        mc:Ignorable="d"
+        Name="EntryWindow"
+        Title="{Binding Title}" Height="300" Width="300"
+        WindowStartupLocation="CenterScreen">
+    
+    <Window.DataContext>
+        <viewModels:ManningTableEntryViewModel/>
+    </Window.DataContext>
+    
+    <Grid Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0"  Margin="2" Padding="2" Content="Подразделение"/>
+        <ComboBox Grid.Row="0" Grid.Column="1"  Margin="2" Padding="2" 
+                  ItemsSource="{Binding Divisions}"
+                  SelectedItem="{Binding SelectedDivision}"/>
+        <Label Grid.Row="1" Grid.Column="0" Margin="2" Padding="2" Content="Ставка"/>
+        <ComboBox Grid.Row="1" Grid.Column="1"  Margin="2" Padding="2" 
+                  ItemsSource="{Binding Rates}"
+                  SelectedItem="{Binding SelectedRate}"/>
+        <Label Grid.Row="2" Grid.Column="0" Margin="2" Padding="2" Content="Количество"/>
+        <TextBox Grid.Row="2" Grid.Column="1"  Margin="2" Padding="2" Text="{Binding HeadCount}"/>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+                    Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Отменить" Margin="2" Padding="2" 
+                    Command="{Binding Cancel}" 
+                    CommandParameter="{Binding ElementName=EntryWindow}"/>
+            <Button Content="Сохранить" Margin="2" Padding="2"
+                    Command="{Binding Save}" 
+                    CommandParameter="{Binding ElementName=EntryWindow}"/>
+        </StackPanel>
+    </Grid>
+</Window>

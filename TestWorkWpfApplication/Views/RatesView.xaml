@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="TestWork.PL.Views.RatesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestWork.PL.Views"
+             xmlns:viewModels="clr-namespace:TestWork.PL.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.DataContext>
+        <viewModels:RatesViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--<TextBlock Text="Rates"></TextBlock>-->
+        <DataGrid Grid.Row="0" AutoGenerateColumns="False"
+                  ItemsSource="{Binding Rates, Mode=TwoWay}"
+                  SelectedItem="{Binding SelectedRate, Mode=TwoWay}"
+                  Name="RatesGrid"
+                  RowHeaderWidth="20">
+            <DataGrid.Columns>
+                <DataGridComboBoxColumn Header="Должность" 
+                                        SelectedItemBinding="{Binding Position}">
+                    <DataGridComboBoxColumn.ElementStyle>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.JobPositions, 
+                                RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"/>
+                        </Style>
+                    </DataGridComboBoxColumn.ElementStyle>
+                    <DataGridComboBoxColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.JobPositions, 
+                                RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"/>
+                        </Style>
+                    </DataGridComboBoxColumn.EditingElementStyle>
+                </DataGridComboBoxColumn>
+                <DataGridTemplateColumn Header="Дата действия ставки" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding ValidDate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Размер ставки" Binding="{Binding RateValue}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Сохранить" Margin="2" Padding="2" 
+                    Command="{Binding SaveRates}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

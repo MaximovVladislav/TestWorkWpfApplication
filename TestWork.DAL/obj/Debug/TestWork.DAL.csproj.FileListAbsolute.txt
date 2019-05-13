@@ -1,0 +1,7 @@
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.DAL\bin\Debug\TestWork.DAL.dll
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.DAL\bin\Debug\TestWork.DAL.pdb
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.DAL\obj\Debug\TestWork.DAL.dll
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.DAL\obj\Debug\TestWork.DAL.pdb
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.DAL\bin\Debug\TestWork.Model.dll
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.DAL\bin\Debug\TestWork.Model.pdb
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.DAL\obj\Debug\TestWork.DAL.csprojResolveAssemblyReference.cache

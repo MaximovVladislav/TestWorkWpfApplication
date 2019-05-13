@@ -1,0 +1,13 @@
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\bin\Debug\TestWork.Tests.dll
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\bin\Debug\TestWork.Tests.pdb
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\bin\Debug\TestWork.PL.exe
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\bin\Debug\TestWork.PL.pdb
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\obj\Debug\TestWork.Tests.csprojResolveAssemblyReference.cache
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\obj\Debug\TestWork.Tests.dll
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\obj\Debug\TestWork.Tests.pdb
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\bin\Debug\TestWork.Model.dll
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\bin\Debug\TestWork.BLL.dll
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\bin\Debug\TestWork.DAL.dll
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\bin\Debug\TestWork.Model.pdb
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\bin\Debug\TestWork.BLL.pdb
+C:\Users\тм2\Documents\Visual Studio 2015\Projects\TestWorkWpfApplication\TestWork.Tests\bin\Debug\TestWork.DAL.pdb

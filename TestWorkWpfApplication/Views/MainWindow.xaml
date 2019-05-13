@@ -1,0 +1,47 @@
+﻿<Window x:Class="TestWork.PL.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewModels="clr-namespace:TestWork.PL.ViewModels"
+        xmlns:views="clr-namespace:TestWork.PL.Views"
+        Title="{Binding Title, Mode=OneWay}" Height="350" Width="525">
+    
+    <Window.DataContext>
+        <viewModels:MainWindowViewModel/>
+    </Window.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Ставки" Command="{Binding OpenRates}"/>
+                <MenuItem Header="Штатное расписание" Command="{Binding OpenManningTable}"/>
+                <MenuItem Header="Отчет" Command="{Binding OpenReport}"/>
+            </MenuItem>
+        </Menu>
+        
+        <TabControl Grid.Row="1"
+                    ItemsSource="{Binding Tabs}"
+                    SelectedItem="{Binding SelectedTab, UpdateSourceTrigger=PropertyChanged}"
+                    Name="UniversalTabControl">
+            <TabControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title}"/>
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <TabControl.Resources>
+                <DataTemplate DataType="{x:Type viewModels:RatesViewModel}">
+                    <views:RatesView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:ManningTableViewModel}">
+                    <views:ManningTableView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:ReportViewModel}">
+                    <views:ReportView/>
+                </DataTemplate>
+            </TabControl.Resources>
+        </TabControl>
+    </Grid>
+</Window>
